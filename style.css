@@ -1,0 +1,562 @@
+*{
+    padding: 0;
+    margin: 0;
+    transition: .1s;
+}
+body{
+    background-color: #ebf2ff;
+}
+html{
+    text-align: center;
+    font-family: 'Poppins';
+    font-size: 16px;
+    background-color: #ebf2ff;
+    color: rgb(22, 22, 22);
+    line-height: 30px;
+}
+header{
+    background-color: #1C4B82;
+    /* background-color: black; */
+    color: #ebebeb;
+    height: 70px;
+    display: flex;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    /* background: ; */
+}
+header .logo{
+    margin: auto;
+    opacity: 1;
+    text-align: left;
+    padding-left: 20px;
+    width: 100%;
+}
+
+header .logo a{
+    color: #ebebeb;
+    text-decoration: none;
+    font-size: 28px;
+    font-family:'Times New Roman', Times, serif;
+}
+
+.logo a:hover {
+    box-shadow: 0 12px 25px 0 rgba(0,0,0,0.2);
+  }
+
+  .fa-bars :hover{
+    box-shadow: 0 12px 15px 0 rgba(0,0,0,0.2);
+
+  }
+
+/* The Overlay (background) */
+.overlay {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+    height: 100%;
+    width: 0;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    /* background-color: rgb(0,0,0); Black fallback color */
+    background-color: rgba(28, 75, 130, 0.95); /* Black w/opacity */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+  }
+  
+  /* Position the content inside the overlay */
+  .overlay-content {
+    position: relative;
+    top: 1%; /* 25% from the top */
+    width: 100%; /* 100% width */
+    /* text-align: center; Centered text/links */
+    margin-top: 10px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+
+  }
+  .overlay-links a{
+      text-align: center;
+
+  }
+  /* The navigation links inside the overlay */
+  .overlay a {
+    padding: 10px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #ebebeb;
+    display: block; /* Display block instead of inline */
+    transition: 0.5s; /* Transition effects on hover (color) */
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .overlay a:hover, .overlay a:focus {
+    color: #000;
+  }
+  
+  /* Position the close button (top right corner) */
+  .overlay .closebtn {
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    font-size: 60px;
+  }
+  
+  
+  /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+
+
+
+  @media screen and (max-height: 1280px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+    }
+}
+.fa-bars{
+    font-size: 1.5em;
+    padding-right: 20px;
+    margin-top: 20px;
+    cursor: pointer;
+
+}
+.overlay-icons{
+    display: inline-flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.overlay-icons a{
+    vertical-align: bottom;
+    margin-top: 75%;
+    font-size: 1.1em;
+    text-align: center;
+}
+.desk-bar{
+    display: none;
+}
+
+.mode-btn{
+    display: flex;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+
+.mode-btn img{
+    height: 24px;
+    margin: auto;
+    color: aliceblue;
+}
+.dark-mode{
+    /* transition: all ease-out 1s; */
+    background-color: #121212;
+    color: #ebebeb;
+}
+
+.container .card .card-body {
+    background-color: #ffffff;
+    color: #121212;
+    border-radius: 5px;
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 20px; 
+    
+}
+
+.card{
+    width: 60%;
+    margin: auto; 
+}
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+
+
+
+
+
+
+@media only screen and (min-width: 1280px){
+    header .logo{
+        width: 100%;
+        text-align: left;
+        padding-left: 20px;
+    }
+    .desk-bar{
+        display:flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: end;
+        width: 100%;
+    }
+    .desk-bar li{
+        padding: 10px;
+        float: left;
+        list-style: none;
+        justify-content: space-between;
+    }
+    .desk-bar li a{
+        text-decoration: none;
+        color: #ebebeb ;
+    }
+
+    .desk-bar li a:hover {
+        box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2);
+      }
+
+    .burger{
+        display: none;
+    }
+    #phone-nav{
+        display: none;
+    }
+    .bars{
+        display: none;
+    }
+    .mode-btn-desk{
+        display: flex;
+        margin-right: 20px;
+        cursor: pointer;
+        
+    }
+    .mode-btn-desk img{
+        height: 24px;
+        margin: auto;
+        color: aliceblue;
+    }
+    .mode-btn{
+        display: none;
+    }
+}
+
+/* Land page */
+.land {
+    background: linear-gradient( transparent, rgba(28, 59, 130, 0.523), transparent);
+   
+}
+
+.land h1{
+    font-weight: 150px;
+    text-align: left;
+    margin: 70px auto auto auto;
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+    line-height: 50px;
+    font-family: Georgia, serif;
+    font-size: 35px;
+}
+
+
+.social{
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+    /* margin: auto; */
+    padding-bottom: 15px;
+}
+
+
+
+.social a{
+    padding: 20px;
+    color: #1C4B82;
+    /* justify-content: space-between; */
+    font-size: 1.8em;
+    
+}
+
+ a i {
+     transform: all 0.3s linear;
+ }
+a:hover{
+   transform: scale(1.2);
+}
+.social a:active{
+    color: rgb(28, 75, 130);
+}
+.image{
+    width: 100%;
+    
+}
+.image img{
+    width: 250px;
+    border-radius: 60%;
+    border: #1C4B82 5px solid;
+    margin-top: 20px;
+}
+
+.image :hover {
+    box-shadow: 0 8px 30px 0 #1C4B82;
+  }
+
+
+
+
+@media only screen and (min-width: 1280px){
+
+}
+/* About me */
+.about-me{
+    margin: 40px;
+}
+h2{
+    padding-bottom: 20px;
+}
+
+
+@media only screen and (min-width: 1280px){
+    .about-me{
+        width: 60%;
+        margin: auto;
+    }
+    .p{
+        text-align:justify;
+        word-spacing:-2px;
+       
+        }
+   
+}
+/* Work */
+.work{
+    margin: 40px;
+    width: 50;
+    /* line-height: 30px; */
+}
+/* .work h2{
+    padding-bottom: 20px;
+} */
+
+
+/*Project */
+.projects{
+    margin: 40px;
+    width: 50;
+    
+    
+}
+
+
+@media only screen and (min-width: 1280px){
+    .work .websites-photo{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .websites-photo img{
+        padding: 20px;
+    }
+}
+.skills{
+    width: 100%;
+    
+}
+.skills .skills-names{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto 20px;
+    padding: 20px 100px;
+}
+.skills .skills-names p{
+    background-color: #1C4B82;
+    padding: 10px;
+    border-radius: 20px;
+    margin: 2px;
+    color: #ebebeb;
+    max-width: 90px;
+    width: 90px;
+    /* justify-content: spa; */
+}
+
+.skills-names p:hover {
+    box-shadow: 0 8px 12px 0 #1C4B82;
+  }
+
+
+/* Links */
+.title{
+    padding-top: 20px;
+    font-weight: normal;
+}
+.link{
+    background-color: gray;
+    color: #ebebeb;
+    padding: 20px;
+    width: 50%;
+    margin: auto auto 20px auto;
+    border-radius: 30px;
+
+}
+.link-main{
+    margin-top: 70px;
+    height: 100vh;
+}
+a{
+    color: #ebebeb;
+    text-decoration: none;
+}
+.link:hover{
+    background-color: #1C4B82;
+    font-size: 1.1em;
+}
+.link-footer{
+    bottom: 0;
+    width: 100%;
+/*     position: absolute; */
+}
+
+
+footer{
+    padding-top: 10px;
+    background-color: #1C4B82;
+    color:#ebebeb ;
+}
+.contact pre{
+    font-weight: bold;
+    font-size: 20px;
+    font-family:Arial, Helvetica, sans-serif
+}
+
+a i {
+    transform: all 0.3s linear;
+}
+a :hover{
+  transform: scale(1.3);
+}
+
+.cr{
+    font-size: 12px;
+    padding-bottom: 1px;
+}
+.footer-sm{
+    font-size: 15px;
+}
+.footer-sm a{
+    color: #ebebeb;
+
+}
+
+@media only screen and (max-width: 1280px){
+    .land h1{
+        font-size: 25px;
+       
+    }
+
+
+  
+    .about-me{
+
+        text-align: justify;
+        text-align:center;
+    }
+    
+    .work p{
+        text-align: justify;
+        
+       }
+    
+    .container .card{
+        width: 100%;
+        justify-text: left;
+
+    }
+    .container .card-body{
+        text-align: left;
+    }
+  
+
+ 
+    .skills .skills-names p{
+        padding: 15px;
+        font-size: 14px;
+        margin: 10px;
+        color: #ebebeb;
+        max-width: 70px;
+        width: 70px;
+       
+    }
+
+    .skills-names p:hover {
+        box-shadow: 0 8px 12px 0 #1C4B82;
+      }
+
+   
+}
+
+
+
+
+@media only screen and (max-width: 850px){     /*Phone View*/
+    
+    .logo h1 a{
+        font-size: 25px;
+        font-family:'Times New Roman', Times, serif;
+    }
+
+    .land .land-left h1{
+        font-size: 28px;
+       
+    }
+
+    .social a{
+        margin-bottom: 0px;
+    }
+
+    .about-me{
+        padding-top: -50%;
+        width: 80%; 
+        text-align:center;
+
+    }
+
+    .about-me h1{
+        text-align: center;
+    }
+
+    .about-me p{
+
+        text-align: justify;
+        text-justify: inter-word;
+        }
+   
+    .container .card{
+        width: 100%;
+        justify-text: left;
+
+    }
+
+    .container .card-body{
+        text-align: left;
+    }
+    
+    .card:hover {
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+      }
+
+    .work p{
+     text-align: left;
+    }
+
+    .projects p{
+        text-align: left;
+       }
+
+ 
+    .skills .skills-names p{
+        padding: 15px;
+        font-size: 14px;
+        margin: 10px;
+        color: #ebebeb;
+        max-width: 70px;
+        width: 70px;
+       
+    }
+    .skills-names p:hover {
+        box-shadow: 0 8px 12px 0 #1C4B82;
+      }
+
+}
